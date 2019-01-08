@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uWZ-lm-PYM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HPE StorageInfo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StorageInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="kJd-zg-1mk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HParrayCell" rowHeight="88" id="sXZ-il-oMX">
+                                <rect key="frame" x="0.0" y="22" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sXZ-il-oMX" id="2zc-qT-YGR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SxY-oR-HO0" kind="show" id="afb-Hk-qEi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="P95-a9-F4i"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="HPE StorageInfo" id="EDn-XP-LC2">
+                        <barButtonItem key="rightBarButtonItem" id="UiC-ls-cnZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="RJv-3o-HnP">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tQ1-aU-YUm" kind="show" identifier="About" id="WD4-VM-ho2"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="HParrayCell" destination="kJd-zg-1mk" id="rAX-fu-vUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-384"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="LAH-3J-UFN">
+            <objects>
+                <viewController title="About" id="tQ1-aU-YUm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="00Z-Ge-F7n"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbO-QO-3nS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="kSp-z7-df3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkx-Fc-SEj">
+                                <rect key="frame" x="0.0" y="153" width="375" height="400"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">HPE StorageInfo Version 3.0
+
+Copyright 2018 Hewlett Packard Enterprise
+
+Written by
+Larry Bonnette
+
+HPE Storage Technical Marketing Team
+Houston, Texas</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qkx-Fc-SEj" secondAttribute="trailing" id="2FT-Uc-3fh"/>
+                            <constraint firstItem="nbO-QO-3nS" firstAttribute="top" secondItem="Qkx-Fc-SEj" secondAttribute="bottom" constant="114" id="FSY-qP-Xp9"/>
+                            <constraint firstItem="Qkx-Fc-SEj" firstAttribute="leading" secondItem="kSp-z7-df3" secondAttribute="leading" id="KCg-Ry-M1c"/>
+                            <constraint firstItem="Qkx-Fc-SEj" firstAttribute="top" secondItem="00Z-Ge-F7n" secondAttribute="bottom" constant="89" id="ea8-EL-BKI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-sY-NcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="355"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="DJ4-8M-oxn">
+            <objects>
+                <viewController title="Info" id="AgK-IR-4L8" customClass="InfoPageViewController" customModule="StorageInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2t1-wy-zNe"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Py-Og-4B0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4b1-5r-KQs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" restorationIdentifier="InfoPage" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTI-kX-8Y2">
+                                <rect key="frame" x="0.0" y="38" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GTI-kX-8Y2" firstAttribute="leading" secondItem="4b1-5r-KQs" secondAttribute="leading" id="Hq6-eK-wID"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GTI-kX-8Y2" secondAttribute="bottom" constant="26" id="QGz-ek-lzP"/>
+                            <constraint firstAttribute="trailing" secondItem="GTI-kX-8Y2" secondAttribute="trailing" id="cnv-IH-8SM"/>
+                            <constraint firstItem="GTI-kX-8Y2" firstAttribute="top" secondItem="4b1-5r-KQs" secondAttribute="topMargin" constant="-26" id="r4f-6O-rfU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="B2L-EA-Mda"/>
+                    <connections>
+                        <outlet property="InfoPageconnection" destination="GTI-kX-8Y2" id="Nnu-h9-o7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkz-Gf-BHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861" y="714"/>
+        </scene>
+        <!--Tech Specs-->
+        <scene sceneID="702-SU-g0o">
+            <objects>
+                <viewController title="Tech Specs" id="dcq-5L-JDF" customClass="PointsPageViewController" customModule="StorageInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ogg-T7-Tao"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9w-oq-WLd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eBM-xq-yhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" restorationIdentifier="PointsPage" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ada-V8-9jg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="618"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ada-V8-9jg" firstAttribute="leading" secondItem="eBM-xq-yhU" secondAttribute="leading" id="QUR-kq-XHH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ada-V8-9jg" secondAttribute="bottom" constant="-64" id="bt1-ZP-bbg"/>
+                            <constraint firstItem="ada-V8-9jg" firstAttribute="top" secondItem="Ogg-T7-Tao" secondAttribute="bottom" id="cAB-t2-URa"/>
+                            <constraint firstAttribute="trailing" secondItem="ada-V8-9jg" secondAttribute="trailing" id="gFH-jh-HN6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Points" id="AXw-h0-N85"/>
+                    <connections>
+                        <outlet property="PointsPageconnection" destination="ada-V8-9jg" id="i76-pC-E7q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxA-sq-cAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="714"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="GAr-dC-7Z4">
+            <objects>
+                <viewController title="Image" id="SxY-oR-HO0" customClass="ImagePageViewController" customModule="StorageInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TBt-hu-puF"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Mp-2E-Sm2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6MF-ej-Cgr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Naq-AX-UR4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="snQ-df-wvD" appends="YES" id="Gya-mb-YN9"/>
+                                    <outletCollection property="gestureRecognizers" destination="GRz-AK-9Fp" appends="YES" id="nZK-K5-XSg"/>
+                                    <outletCollection property="gestureRecognizers" destination="tuV-Rt-hQb" appends="YES" id="Das-sm-Re7"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-DU-9C7">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="4mJ-JM-zZq"/>
+                                </constraints>
+                                <state key="normal" title="Info">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AgK-IR-4L8" kind="show" identifier="InfoID" id="1lC-Zl-ISA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UM1-WR-djg">
+                                <rect key="frame" x="279" y="617" width="80" height="30"/>
+                                <state key="normal" title="Tech Specs">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dcq-5L-JDF" kind="show" identifier="PointsID" id="FVQ-Tx-5gY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Naq-AX-UR4" secondAttribute="trailing" id="EgK-H7-yJF"/>
+                            <constraint firstAttribute="bottom" secondItem="UM1-WR-djg" secondAttribute="bottom" constant="20" symbolic="YES" id="Ex0-Oj-nIe"/>
+                            <constraint firstItem="Naq-AX-UR4" firstAttribute="leading" secondItem="6MF-ej-Cgr" secondAttribute="leading" id="K7p-FV-xBc"/>
+                            <constraint firstItem="Naq-AX-UR4" firstAttribute="top" secondItem="TBt-hu-puF" secondAttribute="bottom" id="MMl-yL-Glv"/>
+                            <constraint firstItem="cP3-DU-9C7" firstAttribute="baseline" secondItem="UM1-WR-djg" secondAttribute="baseline" id="SRQ-U9-1du"/>
+                            <constraint firstAttribute="bottom" secondItem="Naq-AX-UR4" secondAttribute="bottom" id="Vhj-Uf-hef"/>
+                            <constraint firstItem="cP3-DU-9C7" firstAttribute="leading" secondItem="6MF-ej-Cgr" secondAttribute="leadingMargin" id="Wus-uk-8gI"/>
+                            <constraint firstItem="UM1-WR-djg" firstAttribute="trailing" secondItem="6MF-ej-Cgr" secondAttribute="trailingMargin" id="lqP-6V-bjE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image" id="WRY-ap-AGA"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ImgPage" destination="Naq-AX-UR4" id="CwM-XX-wd8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feU-0l-CUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="snQ-df-wvD">
+                    <connections>
+                        <action selector="ScaleImage:" destination="SxY-oR-HO0" id="wuR-MF-neK"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GRz-AK-9Fp">
+                    <connections>
+                        <action selector="handlePan:" destination="SxY-oR-HO0" id="J73-Dp-dYe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="tuV-Rt-hQb">
+                    <connections>
+                        <action selector="handleTap:" destination="SxY-oR-HO0" id="xqQ-uw-vQJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1856" y="-384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CAy-HW-GeV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWZ-lm-PYM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VEs-sM-fgP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eMY-od-ehm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bi8-Pi-Yf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="-384"/>
+        </scene>
+    </scenes>
+</document>
